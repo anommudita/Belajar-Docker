@@ -1,0 +1,11 @@
+Dockerfile
+
+1. Dockerfile => sebuah script intruksi" untuk membuat image dan tidak sekompleks instuksi kode-kode dibahasa pemrograman
+2.Docker Build ==> perintah untuk membuat docker file namun namanya akan otomatis dibuat, jika tidak maka isi perintahnya
+3.Dockerfile File Format, nama filenya Dockerfile dan tidak memiliki format extension
+4.Instruction Format, sebuah instruksi format untuk membuat instruksi dan ada 3 format (#, INSTRUCTION, Argumets)
+5. FROM Instruction, perintah untuk memanggil image luar atau seperti memanggil library di java
+6. RUN instruction, RUN adalah hasil dari perubahan Image yang kita buat sebelumnya, istilahnya dicommit tapi RUN ini hanya berjalan diperubahan Image, setelah sudah menjadi Image maka perintah Run tidak dijalankan lagi. Misal RUN install database, RUN install nginx ==> sudah diinstall pada saat membangun Imagenya dan sesuatu saat menjalan ke 2 aplikasi tersebut hanya mejalankan 1 image saja(pada proses image dibuat)
+7. Display Output, untuk melihat detail pada proses membangun docker built atau membuat Image
+8. Label Instruction, untuk menambahkan label atau informasi tentang Image tersebut, setelah membangun image untuk melihat informasi tersebut harus menggunakan docker inspect agar mengetahui detail informasi dan label tersebut diletakan disana.
+9. ADD Instuction, memindahkan file dari source ke destination(Dockerfile), file bisa dikirim sekaligus dan filenya berbentuk tar.gz dari soucer jika dikirim ke destionation akan otomatis diektrk

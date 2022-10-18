@@ -1,0 +1,29 @@
+ISO atau Image ==> seperti aplikasi installernya 
+Container ==> hasil installernya berupa aplikasi
+
+1.container exec => untuk jalankanprogram langusng didalam Docker servernya
+2.portforwarding => teknik untuk meneruskan port ke client agar bisa mengakses aplikasi didalam containernya.
+3. Container Environment Variable ==> bisa mengubah konfigurasi apliasi tanpa harus hardcode atau mengubah codingannya, seperti username dan password, maupun database
+4. Container Stats = Stastistik Pengguna Memory dan CPU ==> seperti task manager pada windows
+5. Container Resource Limit, membatasi penggunaan memory dan cpu, umum digunakan di OS linux karena memory dan cpu-nya jadi satu maka dari itu kita harus membatasinya
+6. Bind Mounts => teknik backup datanya di sistem host, ketika kita hapus data container maka data akan disimpan sistem hostnya, jika sewaktu-watku kita menghapus containernya
+7. Docker Volume adalah bawaan dari Docker(di manage oleh dockernya) untuk menyimpanan data container, bisa membuat, dilihat maupun dihapus 
+8. Container Volume, setelah sudah membuat volume maka kita akan mengintergrasikannya ke Container,dan keuntungannya semisal Container dihapus maka data akan tetap aman di Volume ya
+9. Backup Volume, fungsinya untuk backup data volume, namun sayangnya kita tidak bisa membuatnya secara otomatis karena Volume ada dimanage oleh sistem Dockernya. kita bisa memanfaatkan container agar bisa backup ==> teknik menggunak 2 mount yaitu bind dan volume
+10. Restore Volume, teknik untuk melakukan pemulihan data menggunakan restore volume dari data yang sudah dibackup
+11. Docker Network, docker secara default terisolasi jadi teknik ini mengabungkan antara container lainnya
+12.Inspect, untuk melihat detail image,container, volume, network (lengkap beserta port,codingannya terlihat)
+13. Prune, menghapus secara otomatis sesuai dengan kondisi(sudah distop, image yang tidak gunakan lagi oleh container, Netwokr, dan VOlume)
+
+
+Materi Selajutnya
+Docker Dockerfile  membuat image baru, cocok banget untuk developer dan untuk DevOps hanya menggunakan saja
+Docker Compose  Fitur Compose, mengatur container,volume,network menggunakan konfigurasi dan tidak perlu lagi satu-satu mengkonfigurasi menggunakan CLI dan bisa sekali setting saja 
+
+
+
+
+
+pertanyaan??
+gimana caranya menggunakan mongoDB atau Robomongo untuk mengkoneksikannya?
+gimana caranya mengetahui container ini sudah terkoneksi dengan networknya ya mana?
